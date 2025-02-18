@@ -1,13 +1,54 @@
-// Custom JS for Slider
-$(document).ready(function () {
-    $('.carousel').carousel({
-        interval: 8000 // Change image every 8 seconds
-    });
+// == Custom JS for auto change img ==
+document.addEventListener("DOMContentLoaded", function () {
+    // Background images array
+    const images = [
+        "url('img/bg/bgimg3.jpg')",
+        "url('img/bg/bgimg2.jpg')",
+        "url('img/bg/bgimg4.jpg')",
+        "url('img/bg/bgimg5.jpg')",
+        "url('img/bg/b.jpg')"
+    ];
+
+    let index = 0;
+
+    function changeBackground() {
+        document.querySelector(".background-container").style.backgroundImage = images[index];
+        index = (index + 1) % images.length; // Loop through images
+    }
+
+    // Set initial background
+    changeBackground();
+
+    // Change background every 5 seconds
+    setInterval(changeBackground, 5000);
 });
 
-// function redirectToBooking() {
-//     window.location.href = "book.html";
-// }
+// $(document).ready(function () {
+//     // List of background images
+//     let images = [
+//         "url('img/bg/bgimg2.jpg')",
+//         "url('img/bg/bgimg3.jpg')",
+//         "url('img/bg/bgimg4.jpg')",
+//         "url('img/bg/bgimg5.jpg')",
+//         "url('img/bg/bgimg2.jpg')"
+//     ];
+
+//     let currentIndex = 0;
+
+//     function changeBackground() {
+//         $(".background-container").fadeOut(1000, function () {
+//             $(this).css("background-image", images[currentIndex]).fadeIn(1000);
+//         });
+
+//         currentIndex = (currentIndex + 1) % images.length;
+//     }
+
+//     // Initial background setup
+//     $(".background-container").css("background-image", images[currentIndex]);
+
+//     // Change background every 5 seconds
+//     setInterval(changeBackground, 5000);
+// });
 
 
 // == nav book btn ==
@@ -18,18 +59,8 @@ function redirectToBooking() {
     }, 300);
 }
 
-//  == register ==
-const sign_in_btn = document.querySelector("#sign-in-btn");
-const sign_up_btn = document.querySelector("#sign-up-btn");
-const container = document.querySelector(".container");
 
-sign_up_btn.addEventListener("click", () => {
-  container.classList.add("sign-up-mode");
-});
 
-sign_in_btn.addEventListener("click", () => {
-  container.classList.remove("sign-up-mode");
-});
 
 
  // ===gallery ===
@@ -59,8 +90,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// ====contact ===
 
+// ====contact ===
 $(document).ready(function () {
   $(".successBox").hide(); // Hide success message initially
 
@@ -87,4 +118,7 @@ $(document).ready(function () {
       $(".successBox").fadeOut(); // Hide success box when close button is clicked
   });
 });
+
+
+// profile==== //
 

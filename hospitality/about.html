@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css\header.css">
     <link rel="stylesheet" href="css\about.css">
     <link rel="stylesheet" href="css\hospital.css">
+    <link rel="stylesheet" href="css\profile.css">
     <link rel="stylesheet" href="css\footer.css">
 </head>
 <body>
@@ -43,9 +44,18 @@
                         </div>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="register.html">Registration</a></li>
-                    <li class="nav-item">
-                        <button class="nav-button animated-btn" onclick="redirectToBooking()">Book Appointment</button>
+                    <li id="registerOption" class="nav-item"><a class="nav-link" href="register.html">Registration</a></li>
+                    <li id="profileNav" class="nav-item" style="display: none;">
+                        <div id="profileContainer">
+                            <div id="profileLogo" class="profile-logo"></div>
+                            <span id="profileInitial" style="display: none;">U</span>
+                            <span id="dropdownArrow">▼</span>
+                        </div>
+                        <div id="profileDropdown" class="dropdown">
+                            <a href="profile.html">Edit Profile</a>
+                            <a href="#">Help & Support</a>
+                            <a href="#" id="logout">Logout</a>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -397,5 +407,7 @@
 
     <!-- Custom JS -->
     <script src="script.js"></script>
+    <script src="js/header.js"></script>
+
 </body>
 </html>

@@ -86,9 +86,12 @@
     outline: none;
     border: none;
     line-height: 1;
-    font-weight: 600;
     font-size: 1.1rem;
-    color: #fcf2f2;
+  }
+
+  .input-field input::after {
+    outline: none;
+    border: none;
   }
   
   .input-field input::placeholder {

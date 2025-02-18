@@ -1,58 +1,26 @@
 /* Sliding Img */
-.carousel-item img {
-    padding-top: 10px;
-    width: 100%; /* Full width */
-    height: 80vh; /* 1/4 of the viewport height */
-    border-radius: 30px;
-    /* box-shadow: 0 3px 3px rgb(22, 108, 227);  */
+
+/* Background Container */
+.background-container {
+  width: 100%;
+  height: 480px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 3s ease-in-out;
+  z-index: -1;
 }
 
-/* Custom styles for carousel indicators */
-.carousel-indicators img {
-    width: 70px;
-    height: 50px; /* Set a fixed height for indicator images */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
-    display: block;
+/* Content Fixed */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-90%, -60%);
+  margin-left: -10px;
+
 }
 
-.carousel-indicators button {
-    width: max-content !important;
-    background: none; /* Remove default background */
-    border: none; /* Remove default border */
-}
-
-/* .carousel-indicators {
-    position: unset;
-    margin-top: 20px; /* Add some spacing 
-} */
-
-.carousel-caption {
-	bottom: 220px;
-	z-index: 2;
-}
-.carousel-caption h5 {
-	font-size: 45px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	margin-top: 25px;
-}
-.carousel-caption p {
-	width: 60%;
-	margin: auto;
-	font-size: 18px;
-	line-height: 1.9;
-}
-.carousel-inner:before {
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background: rgba(79, 78, 78, 0.7);
-  border-radius: 30px;
-	z-index: 1;
-}
 /* End Sliding Img */
 
 
