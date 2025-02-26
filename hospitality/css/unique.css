@@ -1,0 +1,809 @@
+/* =================== background img =================== */
+/* Container for the entire section */
+.img-container {
+    position: relative;
+    width: 100%;
+    height: 470px; /* Default height on desktop */
+    overflow: hidden;
+  }
+  
+  /* Background Image Styling */
+  .bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: fadeInBackground 2s ease-in-out;
+    opacity: .7;
+  }
+  
+  /* Overlay Container: centered in the parent container */
+  .overlay-container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 700px;
+    height: 500px;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    animation: fadeInOverlay 2s ease-in-out 0.5s forwards;
+  }
+  
+  /* Overlay Image fills the overlay container */
+  .overlay-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  /* Overlay Caption: centered over the overlay image with a white board look */
+  .overlay-caption {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(90deg, #092866, #495e81);
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 30px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInCaption 2s ease-in-out 0.5s forwards;
+  }
+  
+  /* Keyframes for Background Image Animation */
+  @keyframes fadeInBackground {
+    0% {
+      opacity: 0;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Keyframes for Overlay Container (and its image) Animation */
+  @keyframes fadeInOverlay {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  
+  /* Keyframes for Caption Animation */
+  @keyframes fadeInCaption {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  /* Responsive Adjustments */
+  
+  /* For screens up to 1024px */
+  @media (max-width: 1024px) {
+    .img-container {
+      height: 400px;
+    }
+    .overlay-container {
+      width: 500px;
+      height: 350px;
+    }
+    .overlay-caption {
+      font-size: 18px;
+      padding: 8px 16px;
+    }
+  }
+  
+  /* For screens up to 768px */
+  @media (max-width: 768px) {
+    .img-container {
+      height: 300px;
+    }
+    .overlay-container {
+      width: 350px;
+      height: 250px;
+    }
+    .overlay-caption {
+      font-size: 12px;
+      padding: 6px 12px;
+    }
+  }
+  
+  /* For screens up to 480px */
+  @media (max-width: 480px) {
+    .img-container {
+      height: 250px;
+    }
+    .overlay-container {
+      width: 300px;
+      height: 220px;
+    }
+    .overlay-caption {
+      font-size: 15px;
+      padding: 4px 8px;
+    }
+  }
+
+
+  /* =================== mission =================== */
+  .our-mission {
+    text-align: center;
+    padding: 60px 20px; /* Top/bottom and left/right padding */
+    background-color: #f9f9f9; /* Optional: background color for contrast */
+  }
+  
+  .our-mission h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .section-line {
+    width: 100px;
+    height: 4px;
+    background-color: #227c70; /* Adjust color as needed */
+    margin: 0 auto 20px; /* Center the line and add bottom margin */
+    border-radius: 2px;
+  }
+  
+  .our-mission p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+
+/* =================== Testimonial Section =================== */
+.testimonial {
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 1s ease-out;
+    padding: 100px 0; /* from .py-100 */
+  }
+  
+  /* Ensure the background section covers the full area */
+  .bg-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    z-index: 3;
+    overflow: hidden;
+  }
+  
+  /* Position the image to the right side */
+  .bg-section .bg-img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: auto;       /* maintains aspect ratio */
+    object-fit: cover; /* ensures the image covers the area without distortion */
+    filter: brightness(0.7);
+    border-radius: 20px;
+  }
+  
+  /* Overlay on the background */
+  .overlay.overlay-2 {
+    position: absolute;
+    top: 0;
+    left: 365px;
+    width: 100%;
+    height: 100%;
+    background: rgba(4, 22, 71, 0.82); /* semi-transparent overlay */
+    z-index: 2;
+    animation: fadeInOverlay 1.5s ease-in-out;
+    border-radius: 20px;
+  }
+
+  .text-overlay {
+    position: absolute;
+    bottom: 200px; /* Distance from bottom */
+    left: 600px;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 1.5;
+    z-index: 9;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .img-container {
+      height: 300px;
+    }
+    .text-overlay {
+      font-size: 16px;
+      padding: 10px;
+      bottom: 15px;
+      left: 10px;
+      right: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .img-container {
+      height: 250px;
+    }
+    .text-overlay {
+      font-size: 14px;
+      padding: 8px;
+      bottom: 10px;
+      left: 5px;
+      right: 5px;
+    }
+  }
+  
+  /* ---------- Testimonial Image & Text Boxes ---------- */
+  .testimonial-img-box {
+    position: relative;
+    z-index: 5;
+    animation: slideIn 1.5s ease-in-out;
+  }
+
+  .testimonial-img-box .img-fluid{
+    border-radius: 10px;
+  }
+  
+  /* Add some spacing if needed */
+  .padding-0 {
+    padding: 0;
+  }
+  
+  /* ---------- Keyframes ---------- */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInOverlay {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* ---------- Responsive Adjustments ---------- */
+  @media (max-width: 768px) {
+    .testimonial {
+      padding: 80px 0;
+    }
+    .testimonial-img-box{
+      animation: none; /* disable slide for small screens if desired */
+    }
+  }
+
+
+
+
+
+ /* Section Title Styling */
+ .section-title {
+  font-size: 28px;
+  text-transform: uppercase;
+
+}
+
+.section-line {
+  width: 50px;
+  height: 3px;
+  background-color: #134dd5;
+  margin: 10px auto 20px;
+  border-radius: 50px;
+}
+
+.section-subtitle {
+  color: #555;
+  font-size: 16px;
+}
+
+/* Service Block Styling */
+.service-block-v8 {
+  display: flex;
+  background: #fff;
+  padding-left: 20px;
+  padding-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.service-block-v8:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Styling */
+.service-block-v8 .icon {
+  position: fixed;
+  width: 20px; /* Default size */
+  height: 20px;
+  background: #f0f0f0;
+  border-radius: 30%;
+  margin-left: 5px;
+}
+
+/* Description Styling */
+.service-block-desc {
+  flex: 1;
+  padding-left: 40px;
+}
+
+.service-block-desc h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  position: relative;
+  text-transform: uppercase;
+  color: #555;
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+/* Underline Effect */
+.service-block-desc h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 30px;
+  height: 2px;
+  background-color: #134dd5;
+}
+
+.service-block-desc p{
+  text-align: left;
+  font-size: 14px;
+  color: #555;
+  padding-top: 10px;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .service-block-v8 {
+      flex-direction: column;
+      text-align: center;
+  }
+}
+
+
+
+
+
+/* ==== teams ==== */
+  /* Section Line (Example styling) */
+  .section-line {
+    width: 80px;
+    height: 4px;
+    background-color: #265885;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  
+  /* Team and Facility Section Enhancements */
+  .team-v1 li {
+    transition: transform 0.3s ease;
+  }
+  
+  .team-v1 li:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Service Block Animation */
+  .service-block-v8 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-block-v8:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  }
+  
+  /* Add additional animations as needed for your elements */
+  
+
+/*==== Doctors Css ====*/ 
+/* Centering and Styling the Title */
+.doctors-title {
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+    animation: slideInUp 1s ease-out;
+}
+
+/* Responsive H2 Styling */
+.doctors-title h2 {
+    font-size: 32px; /* Default size for larger screens */
+    margin-bottom: 10px;
+}
+
+/* Adding a Line Below the H2 */
+.doctors-title::after {
+    content: "";
+    display: block;
+    width: 100px; /* Adjust line width */
+    height: 4px; /* Line thickness */
+    background: #477cb9; /* Line color */
+    margin: 10px auto 0; /* Space between text and line */
+    border-radius: 2px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .doctors-title h2 {
+        font-size: 26px; /* Smaller font on tablets */
+    }
+    .doctors-title::after {
+        width: 80px; /* Reduce line width */
+        height: 3px;
+    }
+}
+  
+@media (max-width: 480px) {
+    .doctors-title h2 {
+        font-size: 22px; /* Smaller font on mobile */
+    }
+    .doctors-title::after {
+        width: 60px; /* Reduce line width further */
+        height: 2px;
+    }
+}
+
+/*---- Keyframes for Entrance Animation ----*/
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*Team Image*/
+.team-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #f3f3f3; /* Light background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+.team-img img {
+    width: 100%;
+    height: 200px; /* Set uniform height */
+}
+
+@media (max-width: 768px) {
+    .team-img img {
+        max-height: 200px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .team-img img {
+        max-height: 180px; /* Further adjust height for mobile */
+    }
+}
+
+.team-v1 {
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+.team-v1 ul {
+    position: relative;
+}
+
+.team-v1 li {
+    flex: 1 1 calc(25% - 20px); /* 4 columns on larger screens */
+    max-width: 25%;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+@media (max-width: 992px) {
+    .team-v1 li {
+        flex: 1 1 calc(50% - 20px); /* 2 columns on tablets */
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .team-v1 li {
+        flex: 1 1 100%; /* 1 column on mobile */
+        max-width: 100%;
+    }
+}
+
+.team-v1 li > .team-img {
+    position: relative;
+    width: 250px;
+}
+
+.team-v1 li > .team-img:after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.4s ease-in-out;
+}
+
+.team-v1 li:hover > .team-img:after {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/*Team Socials*/ 
+.team-v1 li > .team-img ul {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    visibility: hidden; /* Hidden by default */
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.team-v1 li:hover > .team-img ul {
+    visibility: visible;
+}
+
+.team-v1 li > .team-img ul li {
+    display: inline-block;
+}
+
+.team-v1 li > .team-img ul li i {
+    font-size: 18px;
+    color: #eee;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    border-color: #c5c2c2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.team-v1 li > .team-img ul li i.fa-x-twitter:hover {
+    background: #1da1f2;
+    color: #fff;
+}
+
+.team-v1 li > .team-img ul li i.fa-facebook-f:hover {
+    background: #1877f2;
+    color: #fff;
+}
+
+.team-v1 li > .team-img ul li i.fa-instagram:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: #fff;
+}
+
+/*Team Description*/
+.team-v1 li > h3 {
+    color: #555;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 20px 0 7px 30px;
+    text-transform: uppercase;
+    text-align: left;
+    transition: transform 0.3s ease-in-out, color 0.3s ease;
+}
+
+.team-v1 li:hover > h3 {
+    color: #133dd5;
+    transform: scale(1.05);
+}
+
+.team-v1 li > h4 {
+    color: #999;
+    font-size: 11px;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-align: left;
+    margin: 0 0 7px 30px;
+}
+
+.team-v1 li > p {
+    color: #999;
+    margin: 20px 0 7px 30px;
+    position: relative;
+    text-align: left;
+    font-size: 14px;
+}
+
+.team-v1 li > p:before {
+    left: 0;
+    top: -10px;
+    height: 1px;
+    width: 30px;
+    content: " ";
+    position: absolute;
+    transition: width 0.4s ease-in-out, background 0.4s ease-in-out;
+    background: linear-gradient(to right, #133dd5, #1e90ff); 
+}
+
+.team-v1 li:hover > p:before {
+    width: 70%;
+    background: linear-gradient(to right, #1e90ff, #133dd5);
+}
+
+/* Entrance Animation for Team Elements */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hospital Carousel & Facility Section */
+.hospital-carousel {
+    padding: 2rem 0;
+}
+
+.locationInnerBox {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.locationInnerBox:hover {
+    transform: translateY(-5px);
+}
+
+.locationImg_custom img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.locationAddRating_custom {
+    padding: 1.5rem;
+}
+
+.locationAddRating_custom h4 a {
+    color: #2a2a2a;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.locationAddRating_custom h3 {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 1rem 0;
+}
+
+.addPhone a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.total-bad {
+    background: #f8f9fa;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.owl-nav button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%!important;
+    background: #fff!important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.owl-nav button.owl-prev {
+    left: -50px;
+}
+
+.owl-nav button.owl-next {
+    right: -50px;
+}
+
+.owl-dots {
+    margin-top: 2rem!important;
+}
+
+.owl-dot span {
+    width: 12px!important;
+    height: 12px!important;
+    background: #dee2e6!important;
+}
+
+.owl-dot.active span {
+    background: #007bff!important;
+}
+
+@media (max-width: 768px) {
+    .owl-nav {
+        display: none;
+    }
+  
+    .locationImg_custom img {
+        height: 160px;
+    }
+}
+
+/* Additional Anime Style Hover Effects */
+.team-v1 li > .team-img:hover {
+    animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

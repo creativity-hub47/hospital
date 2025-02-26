@@ -112,7 +112,7 @@
   /*= About us Section 2 =*/
   
   .aboutSection {
-    background-color: #f9f9f9;
+    background-color: #1e2e40;
     width: 100vw; /* Ensures full width */
     padding: 50px 0;
     max-width: 100%; /* Prevents any extra width */
@@ -137,7 +137,7 @@
   }
   
   .service-block-v6 .service-desc h2 {
-    color: #555;
+    color: #fefcfc;
     font-size: 18px;
     text-transform: uppercase;
     margin-bottom: 10px;
@@ -145,22 +145,24 @@
   }
   
   .service-block-v6 .service-desc p {
-    color: #555;
+    color: #fefcfc;
     font-size: 14px;
   }
   
   i.icon-custom{
-    color: #555;
+    color: #fcf9f9;
     width: 40px;
     height: 40px;
     line-height: 50px;
     display: inline-block;
-    border: solid 2px #555;
+    border: solid 2px #e8e2e2;
   }
   
   i .icon{
     width: 20px;
     margin-bottom: 16px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
   
   }
   
@@ -169,8 +171,8 @@
   }
   
   i.icon-color-u {
-    color: #135dd5;
-    border: solid 2px #138bd5;
+    color: #c7c7c7;
+    border: solid 2px #cccecf;
   }
   
   /*= About Us Section3 =*/

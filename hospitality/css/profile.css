@@ -42,7 +42,7 @@
     margin-left: 5px;
 }
 
-.dropdown {
+.dropdown1 {
     display: none;
     position: absolute;
     background: white;
@@ -55,18 +55,18 @@
     flex-direction: column;
 }
 
-.dropdown.show {
+.dropdown1.show {
     display: block;
 }
 
-.dropdown a {
+.dropdown1 a {
     display: block;
     padding: 10px;
     text-decoration: none;
     color: #333;
 }
 
-.dropdown a:hover {
+.dropdown1 a:hover {
     background: #f1f1f1;
 }
 
